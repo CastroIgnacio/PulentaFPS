@@ -1,0 +1,27 @@
+{
+  "name": "PulentaFPS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/CastroIgnacio/PulentaFPS",
+  "authors": [
+    "Ignacio Castro elvicioclub@gmail.com"
+  ],
+  "description": "FPS en webgl",
+  "main": "app.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "webgls",
+    "fps",
+    "game",
+    "juego"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
