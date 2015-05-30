@@ -8,6 +8,7 @@ var createScene = function () {
 
     camera.setTarget(BABYLON.Vector3.Zero());
     camera.speed = 0.5;
+    camera.inertia = 0;
     camera.applyGravity = true;
     camera.checkCollisions = true;
 
