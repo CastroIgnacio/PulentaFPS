@@ -25,6 +25,7 @@
     "tests"
   ],
   "dependencies": {
-    "babylonjs": "~2.0.0"
+    "babylonjs": "~2.0.0",
+    "handjs": "*"
   }
 }

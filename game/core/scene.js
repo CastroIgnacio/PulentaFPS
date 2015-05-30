@@ -1,10 +1,10 @@
-var createScene = function () {
+var createScene = function (mobile) {
 
     var scene = new BABYLON.Scene(engine);
 
     scene.clearColor = new BABYLON.Color3(0, 1, 0);
 
-    var camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5, -10), scene);
+    var camera = mobile ? new BABYLON.VirtualJoysticksCamera('camera1', new BABYLON.Vector3(0, 5, -10) , scene) : new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5, -10), scene);
 
     camera.setTarget(BABYLON.Vector3.Zero());
     camera.speed = 0.5;
