@@ -5,11 +5,13 @@ var engine,
     canvas,
     scene;
 
+//Add usefull listener
+window.addEventListener('DOMContentLoaded', onGameLoad);
+window.addEventListener('resize', onResize);
+
 /**
  * Load the game on content load
  */
-document.addEventListener('DOMContentLoaded', onGameLoad);
-
 function onGameLoad() {
     canvas = document.querySelector('#gameCanvas');
     engine = new BABYLON.Engine(canvas, true);
@@ -29,4 +31,11 @@ function onGameLoad() {
     engine.runRenderLoop(function () {
         scene.render();
     });
+}
+
+/**
+ * Resize renderer on windows resize
+ */
+function onResize() {
+    engine.resize();
 }
