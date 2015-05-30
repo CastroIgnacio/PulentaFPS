@@ -1,9 +1,22 @@
-var canvas = document.querySelector('#gameCanvas');
+/**
+ * Init global vars
+ */
+var engine,
+    canvas,
+    scene;
 
-var engine = new BABYLON.Engine(canvas, true);
 
-var scene = createScene();
+/**
+ * Load the game on content load
+ */
+document.addEventListener("DOMContentLoaded", onGameLoad);
 
-engine.runRenderLoop(function () {
-    scene.render();
-});
+function onGameLoad() {
+    canvas = document.querySelector('#gameCanvas');
+    engine = new BABYLON.Engine(canvas, true);
+    scene = createScene();
+
+    engine.runRenderLoop(function () {
+        scene.render();
+    });
+}
