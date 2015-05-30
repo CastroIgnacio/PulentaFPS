@@ -13,6 +13,7 @@ window.addEventListener('resize', onResize);
  * Load the game on content load
  */
 function onGameLoad() {
+    var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
     canvas = document.querySelector('#gameCanvas');
     engine = new BABYLON.Engine(canvas, true);
 
@@ -25,7 +26,7 @@ function onGameLoad() {
     });
 
     //Scene create
-    scene = createScene();
+    scene = createScene(mobile);
 
     //Init render loop
     engine.runRenderLoop(function () {
